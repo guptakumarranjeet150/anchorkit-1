@@ -1,11 +1,24 @@
-````markdown
+<div align="center">
+
 # AnchorKit
 
-**AnchorKit is an open-source toolkit for building anchor-style payment infrastructure, escrow workflows, smart contract modules, diagnostics, and developer tooling.**
+### Open-source infrastructure for anchor workflows, payments, contracts, diagnostics, and developer tooling.
 
-AnchorKit is part of the **Axionvera** ecosystem and is designed as a contributor-friendly monorepo for builders working across payments, contracts, applications, packages, scripts, examples, and tests.
+AnchorKit is part of the **Axionvera** ecosystem and is designed as a contributor-friendly monorepo for builders working across applications, packages, contracts, scripts, examples, and tests.
 
-The project focuses on clean architecture, maintainable code, useful documentation, and reliable development workflows.
+<br />
+
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-0E8A16?style=for-the-badge)
+![Monorepo](https://img.shields.io/badge/Monorepo-pnpm%20%2B%20Turbo-3178C6?style=for-the-badge)
+![Rust](https://img.shields.io/badge/Rust-Contracts-DEA584?style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-Packages-3178C6?style=for-the-badge)
+![Built for Builders](https://img.shields.io/badge/Built%20For-Builders-FBCA04?style=for-the-badge)
+
+<br />
+
+**Build reliable infrastructure. Improve the codebase. Contribute meaningfully.**
+
+</div>
 
 ---
 
@@ -13,24 +26,38 @@ The project focuses on clean architecture, maintainable code, useful documentati
 
 AnchorKit provides a foundation for building and maintaining reusable infrastructure around:
 
+<table>
+  <tr>
+    <td width="50%">
+
+### Core Infrastructure
+
 - Anchor-style payment workflows
 - Payment intent handling
 - Smart contract modules
 - Escrow-related utilities
 - Diagnostics and validation
+
+    </td>
+    <td width="50%">
+
+### Developer Experience
+
 - Developer tooling
 - Configuration management
 - Example implementations
 - Cross-package testing
 - Open-source contributor workflows
 
+    </td>
+  </tr>
+</table>
+
 The goal is to keep the codebase understandable, testable, and easy for contributors to improve.
 
 ---
 
 ## Repository Structure
-
-The current repository is organised as a monorepo:
 
 ```txt
 anchorkit/
@@ -67,19 +94,45 @@ anchorkit/
 
 | Directory | Purpose |
 |---|---|
+| `.github/` | GitHub workflows, issue templates, PR templates, and repository automation |
 | `apps/` | Application-level projects, demos, dashboards, or frontend surfaces |
 | `contracts/` | Smart contract or protocol-related code |
 | `docs/` | Project documentation, architecture notes, and guides |
 | `examples/` | Example implementations and usage references |
-| `issues/` | Structured issue batches or issue-related project planning files |
+| `issues/` | Structured issue batches or issue-related planning files |
 | `packages/` | Shared libraries, reusable modules, and internal packages |
 | `scripts/` | Automation scripts and developer tooling |
 | `tests/` | Shared tests, integration tests, fixtures, and regression coverage |
-| `.github/` | GitHub workflows, issue templates, PR templates, and repository automation |
 
 ---
 
 ## Project Goals
+
+<table>
+  <tr>
+    <td width="33%">
+
+### Clean Architecture
+
+Keep modules, packages, contracts, and applications clearly separated.
+
+    </td>
+    <td width="33%">
+
+### Reliable Testing
+
+Improve confidence through unit, integration, regression, and contract tests.
+
+    </td>
+    <td width="33%">
+
+### Contributor Friendly
+
+Make the project easier to understand, run, review, and improve.
+
+    </td>
+  </tr>
+</table>
 
 AnchorKit aims to:
 
@@ -95,13 +148,15 @@ AnchorKit aims to:
 
 ## Requirements
 
-Before running the project locally, make sure you have the following installed:
+Before running the project locally, install:
 
-- Git
-- Node.js
-- pnpm
-- Rust
-- Cargo
+| Tool | Purpose |
+|---|---|
+| Git | Clone and manage the repository |
+| Node.js | Run JavaScript and TypeScript tooling |
+| pnpm | Install and manage workspace dependencies |
+| Rust | Build and test Rust modules |
+| Cargo | Rust package manager and build tool |
 
 Check your versions:
 
@@ -112,7 +167,7 @@ rustc --version
 cargo --version
 ```
 
-If `pnpm` is not installed, install it with:
+Install pnpm if needed:
 
 ```bash
 npm install -g pnpm
@@ -124,7 +179,7 @@ Install Rust and Cargo with `rustup`:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-After installation, confirm Rust and Cargo are available:
+Confirm Rust and Cargo are available:
 
 ```bash
 rustc --version
@@ -148,13 +203,13 @@ Install dependencies:
 pnpm install
 ```
 
-Run a full project build:
+Build the project:
 
 ```bash
 pnpm build
 ```
 
-Run the test suite:
+Run tests:
 
 ```bash
 pnpm test
@@ -164,83 +219,16 @@ pnpm test
 
 ## Development Commands
 
-### Install Dependencies
-
-```bash
-pnpm install
-```
-
----
-
-### Build the Monorepo
-
-```bash
-pnpm build
-```
-
-This uses the project workspace and build configuration to build the relevant apps and packages.
-
----
-
-### Run Development Mode
-
-If the repository has development scripts configured, run:
-
-```bash
-pnpm dev
-```
-
----
-
-### Run Tests
-
-Run all configured tests:
-
-```bash
-pnpm test
-```
-
-Run tests for a specific package or app if configured:
-
-```bash
-pnpm --filter <package-name> test
-```
-
-Example:
-
-```bash
-pnpm --filter @anchorkit/core test
-```
-
----
-
-### Lint the Codebase
-
-```bash
-pnpm lint
-```
-
----
-
-### Format the Codebase
-
-```bash
-pnpm format
-```
-
-Check formatting without changing files if configured:
-
-```bash
-pnpm format:check
-```
-
----
-
-### Type Check
-
-```bash
-pnpm typecheck
-```
+| Command | Purpose |
+|---|---|
+| `pnpm install` | Install workspace dependencies |
+| `pnpm build` | Build the monorepo |
+| `pnpm dev` | Run development mode if configured |
+| `pnpm test` | Run configured tests |
+| `pnpm lint` | Run lint checks |
+| `pnpm format` | Format the codebase |
+| `pnpm format:check` | Check formatting without changing files |
+| `pnpm typecheck` | Run TypeScript type checks |
 
 ---
 
@@ -248,19 +236,19 @@ pnpm typecheck
 
 The `contracts/` directory contains contract or protocol-related code.
 
-If the contracts use Rust/Cargo, move into the contract directory:
+Move into the contract directory:
 
 ```bash
 cd contracts
 ```
 
-Build the contracts:
+Build contracts:
 
 ```bash
 cargo build
 ```
 
-Run contract tests:
+Run tests:
 
 ```bash
 cargo test
@@ -300,7 +288,7 @@ cd ..
 
 ## Recommended Local Check
 
-Before opening a pull request, run the relevant checks from the repository root:
+Before opening a pull request, run:
 
 ```bash
 pnpm install
@@ -310,7 +298,7 @@ pnpm lint
 pnpm typecheck
 ```
 
-If your change touches Rust contracts, also run:
+For contract changes, also run:
 
 ```bash
 cd contracts
@@ -325,11 +313,17 @@ A clean contribution should pass formatting, linting, tests, type checks, and bu
 
 ---
 
-## Apps
+## Main Areas
+
+<table>
+  <tr>
+    <td width="50%">
+
+### Apps
 
 The `apps/` directory is intended for application-level projects.
 
-These may include:
+Examples may include:
 
 - Demo applications
 - Dashboards
@@ -339,9 +333,10 @@ These may include:
 
 Apps should use shared packages where possible instead of duplicating logic.
 
----
+    </td>
+    <td width="50%">
 
-## Packages
+### Packages
 
 The `packages/` directory contains reusable modules and shared libraries.
 
@@ -354,13 +349,15 @@ Packages may include:
 - Diagnostics modules
 - Validation helpers
 - Configuration tools
-- Shared UI or developer tooling
 
 Package code should be reusable, tested, and clearly scoped.
 
----
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
 
-## Contracts
+### Contracts
 
 The `contracts/` directory contains smart contract or protocol-related code.
 
@@ -372,13 +369,11 @@ Contract contributions should prioritise:
 - Strong tests
 - Safe error handling
 - Documentation for public behaviour
-- Avoiding unnecessary complexity
 
-If a contract change affects external consumers, update the relevant docs, examples, or package integrations.
+    </td>
+    <td width="50%">
 
----
-
-## Examples
+### Examples
 
 The `examples/` directory contains sample implementations and usage references.
 
@@ -390,9 +385,13 @@ Examples should be:
 - Aligned with current package APIs
 - Useful for contributors and integrators
 
+    </td>
+  </tr>
+</table>
+
 ---
 
-## Docs
+## Documentation
 
 The `docs/` directory contains project documentation.
 
@@ -433,13 +432,15 @@ The `tests/` directory contains shared test coverage, integration tests, fixture
 
 Useful test types include:
 
-- Unit tests
-- Integration tests
-- Regression tests
-- Error-path tests
-- Configuration tests
-- Contract tests
-- Cross-package tests
+| Test Type | Purpose |
+|---|---|
+| Unit tests | Validate small isolated behaviours |
+| Integration tests | Validate multiple modules working together |
+| Regression tests | Protect existing behaviour during refactors |
+| Error-path tests | Confirm failures are handled safely |
+| Configuration tests | Validate setup and config behaviour |
+| Contract tests | Validate smart contract behaviour |
+| Cross-package tests | Confirm packages work together |
 
 When adding or changing behaviour, include tests that prove the expected result.
 
@@ -460,7 +461,7 @@ Contributions should aim for:
 - Useful documentation
 - No unrelated rewrites
 
-Avoid large unscoped changes that make review difficult.
+> Large unscoped changes make review harder. Keep pull requests focused.
 
 ---
 
@@ -468,7 +469,7 @@ Avoid large unscoped changes that make review difficult.
 
 Error handling should be consistent and developer-friendly.
 
-Contributions should avoid:
+Avoid:
 
 - Unclear panic paths
 - Raw string errors where typed errors are better
@@ -549,15 +550,14 @@ cd ..
 
 Good contribution areas may include:
 
-- Improving tests
-- Cleaning up module boundaries
-- Fixing small bugs
-- Improving documentation
-- Adding examples
-- Improving diagnostics
-- Refactoring duplicated logic
-- Strengthening error handling
-- Improving package structure
+| Area | Examples |
+|---|---|
+| Tests | Add regression tests, edge-case tests, or integration tests |
+| Refactoring | Clean module boundaries and remove duplicated logic |
+| Documentation | Improve setup guides, examples, and architecture notes |
+| Diagnostics | Improve validation, reporting, and troubleshooting |
+| Contracts | Improve safety, tests, and documentation |
+| Developer Experience | Improve scripts, package structure, and local workflow |
 
 Please avoid low-effort changes that do not meaningfully improve the project.
 
@@ -567,14 +567,15 @@ Please avoid low-effort changes that do not meaningfully improve the project.
 
 Maintainers should review contributions based on:
 
-- Issue alignment
-- Correctness
-- Test coverage
-- Code quality
-- Maintainability
-- Documentation updates
-- Security and reliability impact
-- Long-term usefulness
+| Review Area | What To Check |
+|---|---|
+| Issue alignment | Does the PR solve the linked issue? |
+| Correctness | Does the implementation work as intended? |
+| Tests | Are relevant behaviours covered? |
+| Code quality | Is the implementation clean and maintainable? |
+| Documentation | Are docs updated where needed? |
+| Security | Does the change introduce risk? |
+| Long-term value | Does this improve the project meaningfully? |
 
 A pull request should improve the codebase, not just add activity.
 
@@ -610,13 +611,13 @@ AnchorKit is part of the Axionvera open-source ecosystem.
 
 Axionvera is focused on building reliable infrastructure for digital finance, developer tooling, automation, and protocol systems.
 
-Explore the organisation:
-
 ```txt
 https://github.com/Axionvera
 ```
 
 ---
+
+<div align="center">
 
 ## Build With AnchorKit
 
@@ -625,5 +626,8 @@ Run the tests.
 Pick a meaningful issue.  
 Help improve the project.
 
+<br />
+
 **AnchorKit is built for maintainable infrastructure and open contribution.**
-````
+
+</div>
