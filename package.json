@@ -10,8 +10,8 @@
     "pnpm": ">=9.0.0"
   },
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "node init && turbo run build",
+    "dev": "node init && turbo run dev",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",

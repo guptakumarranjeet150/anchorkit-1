@@ -2,7 +2,7 @@
   "name": "@anchorkit/fixtures",
   "version": "0.1.0",
   "private": false,
-  "description": "Shared, deterministic test fixtures for AnchorKit — accounts, payments, anchors, escrow, diagnostics, and invalid examples. No real secrets or user data.",
+  "description": "Shared, deterministic test fixtures for AnchorKit \u2014 accounts, payments, anchors, escrow, diagnostics, and invalid examples. No real secrets or user data.",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -15,10 +15,12 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "lint": "eslint \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

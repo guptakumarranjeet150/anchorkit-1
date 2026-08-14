@@ -15,10 +15,12 @@
       "require": "./dist/index.js"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "node init && tsup",
+    "dev": "node init && tsup --watch",
     "lint": "eslint \"src/**/*.ts\"",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
