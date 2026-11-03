@@ -15,14 +15,11 @@ coverage
 .nyc_output
 
 # Environment files
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
 # IDE
-.vscode
 .idea
 *.swp
 *.swo
@@ -49,3 +46,4 @@ test_snapshots
 *.tsbuildinfo
 .cache
 .pnpm-store
+config.bat
